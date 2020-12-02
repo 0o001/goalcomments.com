@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Live Football, Soccer Scores & Results - Goal Comments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Get live scores soccer & football see match fixtures, results, reviews, information, league, statistics">
+	<meta name="keywords" content="live football, soccer, scores, result, fixtures, matches, watch, track, goal, comments, reviews, bet">
+	<meta name="copyright" content="nullovy">
+	<meta name="title" content="Live Football, Soccer Scores & Results - Goal Comments">
+	<meta name="author" content="nullovy, iletisim@nullovy.com">
+	<meta name="robots" content="index, follow">
+	<meta name="robots" content="noodp, noydir">
+
+	<meta property="og:title" content="Live Football, Soccer Scores & Results - Goal Comments">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.goalcomments.com">
+	<meta property="og:image" content="https://www.goalcomments.com/favicon.png">
+	<meta property="og:site_name" content="goalcomments">
+	<meta property="og:description" content="Get live scores soccer & football see match fixtures, results, reviews, information, league, statistics">
+	<meta property="og:locale" content="tr_TR">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:description" content="Get live scores soccer & football see match fixtures, results, reviews, information, league, statistics">
+	<meta name="twitter:title" content="Live Football, Soccer Scores & Results - Goal Comments">
+	<meta name="twitter:site" content="https://www.goalcomments.com">
+	<meta name="twitter:image" content="https://www.goalcomments.com/favicon.png">
+
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="manifest" href="https://www.goalcomments.com/manifest.json">
+	
+    <style>
+        body, html {width: 100%; height: 100%; margin: 0; padding: 0; background: #283593;}
+        .wff_widget .wff_livescore_soccer {max-width: none !important;}
+        input[name=searchSide] {width: 50%; border-radius: 5px; border: 1px solid white; font-size: 14px; height: 32px; padding: 6px 12px;-webkit-appearance: none;max-width: 350px;display: none;}
+        .wff_link_container {display: none !important;}
+    </style>
+</head>
+<body>
+	<div style="text-align: center; margin-top: 10px; margin-bottom: 4px;">
+		<input type="search" name="searchSide" placeholder="Search in List (team name, league, time etc.)">
+	</div>
+	<script type="text/javascript" src="https://widget.enetscores.com/FWFA40719E5906B36C"></script>
+	<script>
+		window.onload = function() {
+
+			
+
+			let searchSide = document.querySelector('input[name=searchSide]');
+			searchSide.style.display = 'initial';
+			searchSide.onkeyup = function() {
+
+				let searchText = searchSide.value;
+				[...document.querySelectorAll('.wff_soccer_events')].filter( function (item) {
+
+					let searchResult = item.innerText.trim().toLowerCase().indexOf( searchText.toLowerCase() ) >= 0;
+
+					if(searchResult)
+					{
+						item.style.display = 'block';
+					}
+					else
+					{
+						item.style.display = 'none';
+					}
+					
+				    return searchResult;
+				});
+			}
+		}
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113161718-2"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-113161718-2');
+	</script>
+</body>
+</html>
